@@ -27,7 +27,7 @@ cl::opt<ActionType>
                                  "Generate token kinds and keyword "
                                  "filter")));
 
-bool Main(raw_ostream &OS, RecordKeeper &Records) {
+bool Main(raw_ostream &OS, const RecordKeeper &Records) {
   switch (Action) {
   case PrintRecords:
     OS << Records; // No argument, dump all contents
